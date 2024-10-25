@@ -1,4 +1,5 @@
 import Destinations from "./components/Destinations"
+import Footer from "./components/Footer"
 import HeroSection from "./components/HeroSection"
 import Hotels from "./components/Hotels"
 import Nav1 from "./components/Nav1"
@@ -13,6 +14,7 @@ function App() {
     <HeroSection/>
     <Destinations/>
     <Hotels/>
+    <Footer/>
     </>
   )
 }
