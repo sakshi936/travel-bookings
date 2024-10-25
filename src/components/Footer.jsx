@@ -1,11 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faFacebookF, faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
 	const socialIcons = [faFacebookF, faXTwitter, faInstagram, faLinkedinIn];
 	return (
-		<footer className="bg-gray-900 text-white p-10 flex flex-col justify-center items-center">
+		<footer className="bg-slate-950 text-white pt-10 px-4 md:px-10 pb-3 flex flex-col justify-center items-center">
 			<div className=" mx-auto px-4 flex flex-col ">
 				{/* input section */}
 				<div className=" mb-6 hidden md:flex justify-between items-center w-full">
@@ -20,71 +21,113 @@ function Footer() {
 					</div>
 				</div>
 
-				<hr className="border-gray-700 my-8 hidden md:block" />
+				<hr className="border-white my-8 hidden md:block" />
 
 				{/* footer */}
-				<div className="flex flex-col md:flex-row justify-center items-center">
-					<div className="mb-6 w-full text-center lg:text-left  flex flex-col items-center md:items-start justify-center gap-y-4">
-						<div className="flex items-center justify-center lg:justify-start mb-4">
-							<img src=".\src\assets\NavBar\logo.svg" alt="Travel Bookings Logo" />
-						</div>
-						<p className="text-gray-400">Lorem ipsum dolor sit amet consectetur. Vitae imperdiet id amet lacus risus.</p>
-						<div className=" h-full flex justify-center items-center gap-x-2">
-							{socialIcons?.map((icon, index) => (
-								<div className="border-white border-[1px]  h-fit px-2 py-[0.5px] rounded-full" key={index}>
-									<FontAwesomeIcon icon={icon} size="sm" />
-								</div>
-							))}
-						</div>
-					</div>
-					
+				<div className=" flex flex-col md:flex-row justify-between">
+					{/* logo */}
+					<ul className=" flex flex-col gap-y-2">
+						<li>
+							<img src=".\assets\NavBar\logo.svg" alt="Travel Bookings Logo" width={300} height={300} />
+						</li>
+						<li>
+							<p className="text-white hidden md:block">
+								Lorem ipsum dolor sit amet consectetur. Vitae <br />
+								imperdiet id amet lacus risus.
+							</p>
+						</li>
+						<li>
+							<div className=" flex  gap-x-2 ">
+								{socialIcons?.map((icon, index) => (
+									<div className="border-white border-[1px]  h-fit px-2 py-[0.5px] rounded-full" key={index}>
+										<FontAwesomeIcon icon={icon} size="sm" />
+									</div>
+								))}
+							</div>
+						</li>
+					</ul>
 					{/* About links */}
-					<div className="w-full lg:w-1/3 mb-6 hidden md:flex flex-col">
-						<h3 className="text-lg font-semibold mb-4">About</h3>
-						<ul className="text-gray-400">
-							<li className="mb-2">
+					<ul className="hidden md:flex flex-col gap-y-2">
+						<h3 className="text-lg font-semibold">About</h3>
+						<ul className="text-white flex flex-col gap-y-1">
+							<li>
 								<a href="#">About us</a>
 							</li>
-							<li className="mb-2">
+							<li>
 								<a href="#">Terms and conditions</a>
 							</li>
-							<li className="mb-2">
+							<li>
 								<a href="#">Privacy and cookies policy</a>
 							</li>
 							<li>
 								<a href="#">Contact us</a>
 							</li>
 						</ul>
-					</div>
-
-					{/* Quick Links */}
-					<div className=" text-center lg:text-left flex gap-x-10  w-fit h-full ">
-                        
-                        <div className=" hidden md:flex">
-                            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-                            <ul className="text-gray-400">
-                                <li className="mb-2">
-                                    <a href="#">Flight</a>
-                                </li>
-                                <li className="mb-2">
-                                    <a href="#">Hotel</a>
-                                </li>
-                            </ul>
-                        </div>
-						{/* emial and telephone */}
-						<ul className="text-gray-400">
-							<li>00965-22660160</li>
-							<li>travellogo@gmail.com</li>
+					</ul>
+					{/* quick links */}
+					<ul className="hidden md:flex flex-col gap-y-2">
+						<h3 className="text-lg font-semibold">Quick Links</h3>
+						<ul className="text-white flex flex-col gap-y-1">
+							<li>
+								<a href="#">Flight</a>
+							</li>
+							<li>
+								<a href="#">Hotel</a>
+							</li>
 						</ul>
-					</div>
+					</ul>
+
+					<hr className="border-white mt-6" />
+					{/* mobile responsive */}
+					<ul className="flex md:hidden mt-4">
+						{/* About links */}
+						<ul className="flex flex-col gap-y-2 ml-3">
+							<h3 className="text-md font-semibold">About</h3>
+							<ul className=" flex flex-col gap-y-1">
+								<li>
+									<a href="#">About us</a>
+								</li>
+								<li>
+									<a href="#">Terms and conditions</a>
+								</li>
+								<li>
+									<a href="#">Privacy and cookies policy</a>
+								</li>
+								<li>
+									<a href="#">Contact us</a>
+								</li>
+							</ul>
+						</ul>
+						{/* quick links */}
+						<ul className="flex flex-col gap-y-2">
+							<h3 className="text-md font-semibold">Quick Links</h3>
+							<ul className=" flex flex-col gap-y-1">
+								<li>
+									<a href="#">Flight</a>
+								</li>
+								<li>
+									<a href="#">Hotel</a>
+								</li>
+							</ul>
+						</ul>
+					</ul>
+					{/* contact */}
+					<ul className="hidden  md:flex flex-col gap-y-2 items-start">
+						<li className="flex justify-center items-center gap-x-2">
+							<FontAwesomeIcon icon={faPhone} size="sm" />
+							<p>00965-22660160</p>
+						</li>
+						<li className="flex justify-center items-center gap-x-2">
+							<FontAwesomeIcon icon={faEnvelope} size="sm" />
+							<p>travellogo@gmail.com</p>
+						</li>
+					</ul>
 				</div>
 			</div>
 
 			{/* Footer bottom */}
-			<div className=" mt-5 w-full text-xs md:text-sm text-center">
-				<p className="text-gray-500">
-					Copyright &copy; 2023. Website Powered by
-				</p>
+			<div className=" mt-10 w-full text-xs md:text-sm text-center">
+				<p className="text-gray-500">Copyright &copy; 2023. Website Powered by</p>
 			</div>
 		</footer>
 	);

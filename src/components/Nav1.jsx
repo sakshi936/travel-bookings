@@ -17,7 +17,7 @@ function Nav1() {
         {/* left */}
         <div className=' flex content-center gap-x-4  leading-3'>
             <div className=' flex flex-col  justify-center'>
-                <img src=".\src\assets\Nav-1\Vector.png" alt="vector"  width={20} height={215}/>
+                <img src=".\assets\nav-1\Vector.png" alt="vector"  width={20} height={215}/>
             </div>
             <div className=' font-normal text-xs '>
                 Email:

@@ -1,16 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars,faUser } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
 	return (
 		<div className="w-full  bg-white flex justify-between items-center pr-10 md:pr-20 ">
 			{/* logo */}
 			<div className=" relative  w-[200px] md:w-[320px]  ">
-				<img src=".\src\assets\NavBar\Vector2.png" alt="vector" className="h-full w-full object-cover" />
+				<img src=".\assets\NavBar\Vector2.png" alt="vector" className="h-full w-full object-cover" />
 
 				<div className="absolute inset-0 flex items-center justify-start bg-black bg-opacity-0 ml-2">
-					<img src=".\src\assets\NavBar\logo.svg" alt="logo" className="w-36  md:w-56" />
+					<img src=".\assets\NavBar\logo.svg" alt="logo" className="w-36  md:w-56" />
 				</div>
 			</div>
 
@@ -43,8 +43,9 @@ function Navbar() {
 							{/* Add more currencies as needed */}
 						</select>
 					</li>
-					<li className="flex">
-						<img src="./src/assets/NavBar/User.png" alt="user" />
+					<li className="flex justify-center items-center">
+						{/* <img src="./assets/NavBar/User.png" alt="user" /> */}
+						<FontAwesomeIcon icon={faUser} className="text-gray-700 text-xl" />
 						<select>
 							<option value="login">Login</option>
 							<option value="signup">Signup</option>

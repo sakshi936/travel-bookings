@@ -4,23 +4,23 @@ function Destinations() {
 	const destinationsList = [
 		{
 			name: "Maldives",
-			image: "./src/assets/Destinations/Maldives.png",
+			image: "./assets/Destinations/Maldives.png",
 		},
 		{
 			name: "Paris",
-			image: "./src/assets/Destinations/paris.png",
+			image: "./assets/Destinations/paris.png",
 		},
 		{
 			name: "Bali",
-			image: "./src/assets/Destinations/bali.png",
+			image: "./assets/Destinations/bali.png",
 		},
 		{
 			name: "Egypt",
-			image: "./src/assets/Destinations/egypt.png",
+			image: "./assets/Destinations/egypt.png",
 		},
 		{
 			name: "Spain",
-			image: "./src/assets/Destinations/spain.png",
+			image: "./assets/Destinations/spain.png",
 		},
 	];
 	return (

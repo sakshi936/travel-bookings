@@ -9,7 +9,7 @@ function HeroSection() {
 			<div className="w-auto md:w-[500px] text-center font-semibold text-white flex flex-col justify-center items-center gap-y-7">
 				<h1 className=" text-3xl md:text-5xl">Take a trip around the world together!</h1>
 				
-					<img src=".\src\assets\Hero\discount.png" alt="discount" width={300} height={150}/>
+					<img src=".\assets\Hero\discount.png" alt="discount" width={300} height={150}/>
 				
 			</div>
 			{/*fligth search  card*/}

@@ -5,19 +5,19 @@ function Hotels() {
     const hotels = [
 		{
 			
-			image: "./src/assets/Hotels/img1.png",
+			image: "./assets/Hotels/img1.png",
 		},
 		{
 			
-			image: "./src/assets/Hotels/img2.png",
+			image: "./assets/Hotels/img2.png",
 		},
 		{
 			
-			image: "./src/assets/Hotels/img3.png",
+			image: "./assets/Hotels/img3.png",
 		},
 		{
 			
-			image: "./src/assets/Hotels/img4.png",
+			image: "./assets/Hotels/img4.png",
 		},
 		
 	];
