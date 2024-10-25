@@ -1,7 +1,20 @@
 import React, { useState } from "react";
 
 const FlightSearchCard = () => {
-  // const [tripType, setTripType] = useState("ONE WAY");
+  const [isOpen, setIsOpen] = useState(false);
+
+	// Toggle the list visibility
+	const toggleList = () => {
+		setIsOpen(!isOpen);
+	};
+
+  const airports = [
+		{ name: "Dubai International", country: "United Arab Emirates", code: "DXB" },
+		{ name: "Dubrovnik", country: "Croatia", code: "DBV" },
+		{ name: "Dubbo", country: "Australia", code: "DBO" },
+		{ name: "Al Minhad Air Base", country: "United Arab Emirates", code: "NHD" },
+		{ name: "Pardubice", country: "Czech Republic", code: "PED" },
+	];
 
   return (
     <div className="w-full max-w-lg p-4 bg-white rounded-lg shadow-lg flex flex-col gap-y-3 md:gap-y-5">
@@ -22,13 +35,35 @@ const FlightSearchCard = () => {
       </div>
 
       {/* From and To Section */}
-      <div className=" bg-gray-50 p-4 rounded-lg border-[0px] md:border-[1px] border-gray-800">
+      <div className=" bg-gray-50 p-4 rounded-lg border-[0px] md:border-[1px] border-gray-800 z-0">
         <div className="flex flex-col md:flex-row gap-y-2 md:justify-between items-center">
           <div className="text-center md:text-left rounded-lg border-[1px] md:border-[0px] border-gray-800 py-2 md:py-0 w-[250px] md:w-fit">
             <label className="block text-gray-700 text-xs">From</label>
-            <p className="text-lg font-bold">Dubai(DXB)</p>
+            <button className="text-lg font-bold" onClick={toggleList}>Dubai(DXB)</button>
             <p className="text-xs text-gray-500">Dubai international airport</p>
           </div>
+
+          {/* {isOpen ? 
+          <div className="bg-white shadow-md rounded-lg ">
+					<ul className="divide-y divide-gray-200">
+						{airports.map((airport, index) => (
+							<li
+								key={index}
+								className={`p-4 flex justify-between items-center ${
+									index === 0 ? "bg-teal-400 text-white" : ""
+								}`}
+							>
+								<div>
+									<h3 className="text-lg font-semibold">{airport.name}</h3>
+									<p className="text-sm text-gray-500">{airport.country}</p>
+								</div>
+								<span className="text-xl font-bold">{airport.code}</span>
+							</li>
+						))}
+					</ul>
+				</div>
+        
+         :null} */}
 
           <div className="bg-teal-800 text-sm  text-white w-fit h-[30px] flex flex-col  leading-3 px-2 rounded-full">
               <span  className=" ">
@@ -107,6 +142,7 @@ const FlightSearchCard = () => {
         Search Flight
       </button>
       </div>
+
     </div>
   );
 };
