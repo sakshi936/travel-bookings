@@ -32,7 +32,7 @@ function Destinations() {
 						<div
 							className={`bg-cover bg-center h-[200px] md:h-[500px]  w-full 
                                 ${
-                                    index === 0 ? "h-[130px] md:w-1/2" : "h-[90px] md:w-1/3"
+                                    index === 0 ? "h-[130px] md:w-1/2]" : "h-[90px] md:w-1/3"
                                 } 
                                 
                                 flex  justify-center items-end  rounded-md`}
