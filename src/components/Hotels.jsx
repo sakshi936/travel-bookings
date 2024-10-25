@@ -22,7 +22,7 @@ function Hotels() {
 		
 	];
 	return (
-		<div className="w-full h-auto bg-white mt-4 py-6 px-10 flex flex-col gap-y-4">
+		<div className="w-full h-auto bg-white mt-4 pt-6 pb-20 px-10 flex flex-col gap-y-4 ">
 			<h1 className="text-3xl font-medium">Recommended Best Hotels</h1>
 			<div className="flex flex-col gap-y-3  md:flex-row  md:gap-x-3 ">
 				{hotels.map((hotel, index) => (
