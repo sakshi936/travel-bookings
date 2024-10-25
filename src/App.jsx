@@ -1,3 +1,4 @@
+import Destinations from "./components/Destinations"
 import HeroSection from "./components/HeroSection"
 import Nav1 from "./components/Nav1"
 import Navbar from "./components/Navbar"
@@ -9,6 +10,7 @@ function App() {
     <Nav1/>
     <Navbar/> 
     <HeroSection/>
+    <Destinations/>
     </>
   )
 }
